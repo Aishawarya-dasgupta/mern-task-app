@@ -16,3 +16,25 @@ this will ignore the node_module folder from uploading it in the git
     "start": "node backend/server.js",  // this will help our application to run elsewhereif that system does not have nodemon
     "backend": "nodemon backend/server.js" // this will help our application to run on our system using nodemon
   },
+
+
+
+  URI = uniform resourse identifier
+
+  async because then the site wont hang as async function will be executing in the background (if the executing is not yet completed and user wants to do something else) then the next function will be executed and the previous function will be completed in the background
+  whenerver we are using remote application/resource (can be db server, api etc) then we need to use async and await because we dont know if the resource will be provided to us at once so we need to wait for a while 
+
+
+const startServer = async() => {
+    try{
+        await connectDB()
+        app.listen(PORT,(req,res) =>{
+            console.log(`server is listening on port ${PORT}`);
+        })
+    }catch(error){
+        console.log(error)
+    }
+}
+
+we did this because initially the server was starting first and then the mongodb was getting connected later on which might result to sum error. In the startServer function we are using await and async so that unless the db is getting connected, the server will not listen.
+As initially there was no await or aysnc due to will the server was getting started earlier then mongodb because mongodb needs some time to connect and in that time the server used to start 
