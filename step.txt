@@ -6,20 +6,23 @@ Always start with backend during making a project
 step 3: git init in the terminal 
 step 4: in the mern-task-app folder make a .gitignore file and then inside it write /node_modules
 this will ignore the node_module folder from uploading it in the git
-
+--------------------------------------------------------------------------------------------------------------------------------
 
  console.log(`server is listening on port ${PORT}`);
  this can also be written as 
  console.log("listeningon port." + PORT.toString())
+ --------------------------------------------------------------------------------------------------------------------------------
 
  "scripts": {
     "start": "node backend/server.js",  // this will help our application to run elsewhereif that system does not have nodemon
     "backend": "nodemon backend/server.js" // this will help our application to run on our system using nodemon
   },
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 
   URI = uniform resourse identifier
+
+  --------------------------------------------------------------------------------------------------------------------------------
 
   async because then the site wont hang as async function will be executing in the background (if the executing is not yet completed and user wants to do something else) then the next function will be executed and the previous function will be completed in the background
   whenerver we are using remote application/resource (can be db server, api etc) then we need to use async and await because we dont know if the resource will be provided to us at once so we need to wait for a while 
@@ -38,3 +41,9 @@ const startServer = async() => {
 
 we did this because initially the server was starting first and then the mongodb was getting connected later on which might result to sum error. In the startServer function we are using await and async so that unless the db is getting connected, the server will not listen.
 As initially there was no await or aysnc due to will the server was getting started earlier then mongodb because mongodb needs some time to connect and in that time the server used to start 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+whenever we want to use a file in another file then at the buttom of the file that is to exported in that we write module.exports
+and the file where it is to be used at the beginning of that file we write the require statement 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+if we are using method 2 to connect db and starting the server then do we need the connectDB.js file?
