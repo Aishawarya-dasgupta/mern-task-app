@@ -6,6 +6,8 @@ Always start with backend during making a project
 step 3: git init in the terminal 
 step 4: in the mern-task-app folder make a .gitignore file and then inside it write /node_modules
 this will ignore the node_module folder from uploading it in the git
+
+To run the program we need to write npm run backend 
 --------------------------------------------------------------------------------------------------------------------------------
 
  console.log(`server is listening on port ${PORT}`);
@@ -46,4 +48,8 @@ whenever we want to use a file in another file then at the buttom of the file th
 and the file where it is to be used at the beginning of that file we write the require statement 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-if we are using method 2 to connect db and starting the server then do we need the connectDB.js file?
+if we are using method 2 to connect db and starting the server then do we need the connectDB.js file? -- No we do not need the connectdB file
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+what is a part of crud operation?
+what is a middleware?
