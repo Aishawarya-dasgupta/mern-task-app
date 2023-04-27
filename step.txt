@@ -41,7 +41,7 @@ const startServer = async() => {
     }
 }
 
-we did this because initially the server was starting first and then the mongodb was getting connected later on which might result to sum error. In the startServer function we are using await and async so that unless the db is getting connected, the server will not listen.
+we did this because initially the server was starting first and then the mongodb was getting connected later on which might result to some error. In the startServer function we are using await and async so that unless the db is getting connected, the server will not listen.
 As initially there was no await or aysnc due to will the server was getting started earlier then mongodb because mongodb needs some time to connect and in that time the server used to start 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 whenever we want to use a file in another file then at the buttom of the file that is to exported in that we write module.exports
@@ -53,3 +53,9 @@ if we are using method 2 to connect db and starting the server then do we need t
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 what is a part of crud operation?
 what is a middleware?
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+yarn and npm is a package manager. but yarn is generally used in mac ios but we can even use it in windows but we need to install it unlike npm which comes with node
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+const dotevn = require('dotenv').config();
