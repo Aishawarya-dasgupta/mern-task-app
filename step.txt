@@ -58,4 +58,17 @@ what is a middleware?
 yarn and npm is a package manager. but yarn is generally used in mac ios but we can even use it in windows but we need to install it unlike npm which comes with node
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-const dotevn = require('dotenv').config();
+const dotevn = require('dotenv').config();? -> we are not doing it the general way because here we are importing .env file and not js file. Also if we are importing the dotenv file once in server.js file we can uise it everywhere in the application 
+
+
+module.exports = connectDB // here do we need to export the function or the whole file? -> function is exported but the function and the file name are similar to aviod confusion...if there are more than one function than we can write it inside curlybbracket and commas
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+// const logger = async (req,res,next) => {
+//     console.log("Middleware ran")
+//     console.log(req.method)
+//     next();
+// }
+
+Can we access the next() here? 

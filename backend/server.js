@@ -19,10 +19,6 @@ app.use(taskRoute)
 //     next();
 // }
 
-//Routes
-app.get('/',(req,res)=>{
-    res.send("Home Page")
-})
 
 const startServer = async() => {
     try{
