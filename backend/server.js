@@ -12,13 +12,17 @@ const PORT = process.env.PORT || 3000;
 //Middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended:false})) 
-app.use(taskRoute)
+app.use("/api/tasks",taskRoute)
 // const logger = async (req,res,next) => {
 //     console.log("Middleware ran")
 //     console.log(req.method)
 //     next();
 // }
 
+//Routes 
+app.get('/',(req,res)=>{
+    res.send("Home Page")
+})
 
 const startServer = async() => {
     try{

@@ -72,3 +72,46 @@ module.exports = connectDB // here do we need to export the function or the whol
 // }
 
 Can we access the next() here? 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Diference between model and schema? -> Schema is the blue print of the model. we can perform operations on the model (where the scheme is in). read the defination from internet.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+router.get('/api/tasks/:id',getTask) 
+
+This is called parasms. before id we used colon which identifies the id as a variable and while the server is running we will be able to see the value of id in the address. If we didnot pass the id then it would fetch us all the tasks but since we are mentioning the id it will fetch only the task corresponding to the id.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const {id} =req.params;
+
+We can also write req.params.id then we wont require {} this. We are using {} because we are extracting the id from the url params. This called destructing 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Both are used to update data
+
+PUT - when we are using this we need to specify all the fields that is defined in the schema to update the data whereas in 
+PATCH - we only need to specify the field which we want to update
+
+----------------------------------------------------------------------------------------------------------------------------------------
+//Create a task
+router.post('/', createTask)
+//Read Tasks 
+router.get('/', readTask)
+//Get Tasks
+router.get('/:id',getTask)
+//Delete Tasks
+router.delete('/:id', deleteTask)
+//Update Tasks
+router.put('/:id', updateTask)
+
+this can also be written as : 
+//Routes
+// router.route("/").post(createTask).get(readTask)
+// router.route("/:id").get(getTask).delete(deleteTask).put(updateTask)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Api endpoint is the route that we create because it is where the request goes.
+
